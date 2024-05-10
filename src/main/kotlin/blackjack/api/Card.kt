@@ -1,10 +1,18 @@
 package blackjack.api
 
 class Card(private val suit: Suit, private val rank: Rank) {
-    fun getValue() = rank.name
+    private var cardState: CardState = CardState.FACE_UP
+    fun getValue() = rank.value
     fun getSuit() = suit
     fun getRank() = rank
+    fun getCardStatus() = cardState
+    fun setCardStatus(cState: CardState) {
+        cardState=cState
+    }
+
     override fun toString(): String {
+        if (cardState == CardState.FACE_DOWN)
+            return "XX"
         return "$rank$suit"
     }
     companion object {

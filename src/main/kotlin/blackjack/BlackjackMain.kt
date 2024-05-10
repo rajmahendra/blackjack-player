@@ -1,7 +1,9 @@
 package blackjack
 
-import blackjack.api.Card
+import blackjack.runner.BlackjackTable
 
 fun main() {
-    println(Card.createDeck(6))
+ val board = BlackjackTable()
+   board.startBlackjackTable()
+
 }

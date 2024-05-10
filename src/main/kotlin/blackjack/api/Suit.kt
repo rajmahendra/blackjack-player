@@ -4,7 +4,7 @@ enum class Suit(val symbol: String) {
     SPADE("♠\uFE0F"),
     HEART("❤\uFE0F"),
     DIAMOND("♦\uFE0F"),
-    CLUBS("♣\uFE0F");
+    CLUB("♣\uFE0F");
 
     override fun toString(): String {
         return symbol
