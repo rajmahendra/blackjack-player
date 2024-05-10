@@ -1,7 +1,7 @@
 package blackjack
 
+import blackjack.api.Card
+
 fun main() {
-    val name = "Kotlin "
-    println("Hello, $name!")
-    (1..5).forEach { println("i = $it") }
+    println(Card.createDeck(6))
 }
